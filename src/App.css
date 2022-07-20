@@ -1,0 +1,15 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box  ;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+body{
+  background-color: white;
+  color: black;
+}
+
+.teste{
+  color: rgb(174, 255, 0);
+}
