@@ -1,14 +1,18 @@
 import React from "react";
-import AreaHeader from "../../Componenetes/Header";
+import "../../App.css"
+import { ContainerHOME } from "./styled";
+import savings from "../../Images/savings.svg"
+import LinkButton from "../../Components/LinkButton";
 
-
-const HomePage = () => {
+function HomePage() {
     return (
-        <div>
-            <AreaHeader />
-            <h1>Home page</h1>
-        </div>
-    );
+        <ContainerHOME className="centralizer">
+            <h1>Bem Vindo ao <span>Costs</span></h1>
+            <p>Comece a gerenciar seus projetos agora mesmo!</p>
+            <LinkButton to="/NovoProjeto" text="Criar Projeto"/>
+            <img src={savings} alt="Costs"></img>
+        </ContainerHOME>
+    )
 }
 
 export default HomePage

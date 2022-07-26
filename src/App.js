@@ -1,28 +1,29 @@
-import React, { useState } from "react";
+import React from "react";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import "./App.css"
 
+import Home from "./Pages/Home/index"
+import NovoProjeto from "./Pages/NewProjects"
+import Empresa from "./Pages/Empresa/index"
+import Contato from "./Pages/Contato/index"
 
-import Home from './Pages/Home'
-import Config from './Pages/Config'
-import Sair from './Pages/Logout'
-import Login from './Pages/Login'
+import Header from "./Components/Header";
+import Footer from "./Components/Footer";
+
+
 
 function App() {
 
-    const [user, setUser] = useState(null);
-    if (user === null) {
-        return (
-            <Login />
-        );
-    }
     return (
         <Router>
+            <Header/>
             <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/Config" element={<Config />} />
-                <Route path="/Logout" element={<Sair />} />
+                <Route exact path="/" element={<Home />} />
+                <Route path="/NovoProjeto" element={<NovoProjeto />} />
+                <Route path="/Empresa" element={<Empresa />} />
+                <Route path="/Contato" element={<Contato />} />
             </Routes>
+            <Footer/>
         </Router>
     );
 }
